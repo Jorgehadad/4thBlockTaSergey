@@ -5,7 +5,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.solvd.ta_lab</groupId>
-	<artifactId>project_ta</artifactId>
+	<artifactId>Yorch-Project-TA</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>test_automation_solvd</name>
