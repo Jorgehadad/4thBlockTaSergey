@@ -21,7 +21,7 @@ import com.qaprosoft.carina.core.foundation.utils.R;
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 public class PatchCommentMethod extends AbstractApiMethodV2 {
     public PatchCommentMethod() {
-        super("api/comments/patch/rs.json", "api/comments/patch/rs.json", "api/comments/patch/comments.properties");
+        super("api/comments/patch/rs.json", "api/comments/patch/rs.json", "api/comments/comments.properties");
         replaceUrlPlaceholder("comments_url", R.CONFIG.get("comments_url"));
 
     }

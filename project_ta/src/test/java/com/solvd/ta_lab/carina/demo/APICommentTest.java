@@ -66,7 +66,7 @@ public class APICommentTest implements IAbstractTest {
     @Test()
     public void testCommentPatch() {
         PostCommentMethod postCommentMethod = new PostCommentMethod();
-        postCommentMethod.addProperty("name", "George");
+        //postCommentMethod.addProperty("name", "George");
         Response response = postCommentMethod.callAPIExpectSuccess();
         postCommentMethod.validateResponse();
         //postCommentMethod.validateResponseAgainstSchema(DEFAULT);
@@ -78,7 +78,7 @@ public class APICommentTest implements IAbstractTest {
 
         PatchCommentMethod patchCommentMethod = new PatchCommentMethod();
         patchCommentMethod.addProperty("id", id);
-        patchCommentMethod.addProperty("name", "George");
+        //patchCommentMethod.addProperty("name", "George");
         patchCommentMethod.callAPIExpectSuccess();
         patchCommentMethod.validateResponse();
         //patchCommentMethod.validateResponseAgainstSchema(DEFAULT);

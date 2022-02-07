@@ -16,7 +16,7 @@ import com.qaprosoft.carina.core.foundation.utils.R;
 @SuccessfulHttpStatus(status = HttpResponseStatusType.CREATED_201)
 public class PostCommentMethod extends AbstractApiMethodV2 {
     public PostCommentMethod() {
-        super("api/comments/post/rq.json", "api/comments/post/rs.json", "api/comments/post/comments.properties");
+        super("api/comments/post/rq.json", "api/comments/post/rs.json", "api/comments/comments.properties");
         replaceUrlPlaceholder("comments_url", R.CONFIG.get("comments_url"));
     }
 }
