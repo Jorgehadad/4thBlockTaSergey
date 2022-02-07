@@ -81,8 +81,8 @@ public class APICommentTest implements IAbstractTest {
         //patchCommentMethod.addProperty("name", "George");
         patchCommentMethod.callAPIExpectSuccess();
         patchCommentMethod.validateResponse();
-        //patchCommentMethod.validateResponseAgainstSchema(DEFAULT);
-        //System.out.println(patchCommentMethod.getResponse().asString());
+        patchCommentMethod.validateResponseAgainstSchema("api/comments/patch/rs.schema.json");
+        System.out.println(patchCommentMethod.toString());
     }
 
 /*
