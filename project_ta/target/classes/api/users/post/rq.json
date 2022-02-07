@@ -1,0 +1,8 @@
+{
+  <#if name?exists>
+  "name": "${name}",
+  <#else>
+  "name": "property-is-missing",
+  </#if>
+  "job": "${job}"
+}

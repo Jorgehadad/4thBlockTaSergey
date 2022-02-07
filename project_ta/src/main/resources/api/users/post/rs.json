@@ -1,0 +1,8 @@
+{
+  <#if name?exists>
+  "name": "${name}",
+  </#if>
+  "job": "${job}",
+  "id": "regex:[0-9]+",
+  "createdAt": "skip"
+}
