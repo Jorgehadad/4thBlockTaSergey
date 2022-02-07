@@ -15,14 +15,14 @@ import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.R;
 
-@RequestTemplatePath(path = "api/users/patch/rs.json")
-@ResponseTemplatePath(path = "api/users/patch/rs.json")
-@Endpoint(methodType = HttpMethodType.PATCH, url = "${api_url}/api/users/2")
+@RequestTemplatePath(path = "api/comments/patch/rq.json")
+@ResponseTemplatePath(path = "api/comments/patch/rs.json")
+@Endpoint(methodType = HttpMethodType.PATCH, url = "${comments_url}/posts/1")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 public class PatchCommentMethod extends AbstractApiMethodV2 {
     public PatchCommentMethod() {
-        super("api/users/patch/rs.json", "api/users/patch/rs.json", "api/users/patch/user.properties");
-        replaceUrlPlaceholder("api_url", R.CONFIG.get("api_url"));
+        super("api/comments/patch/rs.json", "api/comments/patch/rs.json", "api/comments/patch/comments.properties");
+        replaceUrlPlaceholder("comments_url", R.CONFIG.get("comments_url"));
 
     }
     

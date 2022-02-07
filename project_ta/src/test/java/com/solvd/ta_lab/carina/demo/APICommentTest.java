@@ -25,7 +25,7 @@ import com.solvd.ta_lab.carina.demo.api.comments.*;
 public class APICommentTest implements IAbstractTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-    //@Test()
+    @Test()
     public void testCommentPost() {
         PostCommentMethod postCommentMethod = new PostCommentMethod();
         //postCommentMethod.expectResponseStatus(HttpResponseStatusType.CREATED_201);
@@ -53,7 +53,7 @@ public class APICommentTest implements IAbstractTest {
         //System.out.println(postCommentMethod.getProperties().get("job"));
     }
 
-    //@Test()
+    @Test()
     public void testCommentGet() {
         GetCommentMethods getCommentMethods = new GetCommentMethods();
         getCommentMethods.callAPIExpectSuccess();
@@ -63,20 +63,22 @@ public class APICommentTest implements IAbstractTest {
     }
 
     //PATCH
-    //@Test()
+    @Test()
     public void testCommentPatch() {
         PostCommentMethod postCommentMethod = new PostCommentMethod();
+        postCommentMethod.addProperty("name", "George");
         Response response = postCommentMethod.callAPIExpectSuccess();
         postCommentMethod.validateResponse();
         //postCommentMethod.validateResponseAgainstSchema(DEFAULT);
         //System.out.println(postCommentMethod.getResponse().asString());
 
-        String id = JsonPath.read(response.asString(), "$.id");
-        System.out.println("ID: " + id);
+        Integer id = JsonPath.read(response.asString(), "$.id");
+        String idString = id.toString();
+        System.out.println("ID: " + idString);
 
         PatchCommentMethod patchCommentMethod = new PatchCommentMethod();
         patchCommentMethod.addProperty("id", id);
-        patchCommentMethod.addProperty("job", "worker");
+        patchCommentMethod.addProperty("name", "George");
         patchCommentMethod.callAPIExpectSuccess();
         patchCommentMethod.validateResponse();
         //patchCommentMethod.validateResponseAgainstSchema(DEFAULT);
