@@ -85,47 +85,5 @@ public class APICommentTest implements IAbstractTest {
         System.out.println(patchCommentMethod.toString());
     }
 
-/*
-    @Test()
-    @MethodOwner(owner = "qpsdemo")
-    public void testCreateComment() throws Exception {
-        LOGGER.info("test");
-        setCases("4555,54545");
-        PostCommentMethod api = new PostCommentMethod();
-        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        api.callAPI();
-        api.validateResponse();
-    }
 
-    @Test()
-    @MethodOwner(owner = "qpsdemo")
-    public void testCreateCommentMissingSomeFields() throws Exception {
-        PostCommentMethod api = new PostCommentMethod();
-        api.getProperties().remove("name");
-        api.getProperties().remove("username");
-        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        api.callAPI();
-        api.validateResponse();
-    }
-
-    @Test()
-    @MethodOwner(owner = "qpsdemo")
-    public void testGetComments() {
-        GetCommentMethods getCommentsMethods = new GetCommentMethods();
-        getCommentsMethods.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCommentsMethods.callAPI();
-        getCommentsMethods.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getCommentsMethods.validateResponseAgainstSchema("api/users/_get/rs.schema");
-    }
-
-    @Test()
-    @MethodOwner(owner = "qpsdemo")
-    @TestPriority(Priority.P1)
-    public void testDeleteComments() {
-        DeleteCommentMethod deleteCommentMethod = new DeleteCommentMethod();
-        deleteCommentMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
-        deleteCommentMethod.callAPI();
-        deleteCommentMethod.validateResponse();
-    }
-*/
 }
