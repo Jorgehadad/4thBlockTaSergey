@@ -35,6 +35,11 @@ public class HomePage extends AbstractPage {
     @FindBy(className = "news-column-index")
     private ExtendedWebElement newsColumn;
 
+    //open footerMenuCss
+    public void alertFooterMenuCss() {
+        footerMenuCss.acceptAlert();
+    }
+
     public HomePage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(newsColumn);
