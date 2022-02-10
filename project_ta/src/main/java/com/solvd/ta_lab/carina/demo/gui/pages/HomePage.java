@@ -19,6 +19,13 @@ import com.solvd.ta_lab.carina.demo.gui.components.WeValuePrivacyAd;
 public class HomePage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
+    //css
+    @FindBy(css = "div.footer-menu")
+    private FooterMenu footerMenuCss;
+
+    @FindBy(xpath = "//div[@class='footer-menu']")
+    private FooterMenu footerMenuXpath;
+
     @FindBy(id = "footmenu")
     private FooterMenu footerMenu;
 

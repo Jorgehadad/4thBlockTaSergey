@@ -51,8 +51,7 @@ public class StartSeleniumTest implements IAbstractTest {
         driver.quit();
     }
 
-    //testCarinaSel
-    @Test
+    //@Test
     public void testCarinaSel() throws InterruptedException, MalformedURLException{
         getDriver().get("http://www.google.com");   
         getDriver().getTitle();
@@ -61,10 +60,7 @@ public class StartSeleniumTest implements IAbstractTest {
 
     }
 
-    
-
-
-    @Test
+    //@Test
     public void testLogin() throws MalformedURLException {
         DesiredCapabilities capabilities = new ChromeCapabilities().getCapability("testStartSel");
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.125:4444/wd/hub"), capabilities);
