@@ -28,9 +28,11 @@ public class StartSeleniumTest implements IAbstractTest {
     @Test
     public void testStartSel() throws InterruptedException, MalformedURLException{
         //check just chrome
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.home") + "/Library/Webdriver_mac/chromedriver");
+        WebDriver driver = (WebDriver) new ChromeDriver();
         //ChromeDriver driver = new ChromeDriver();
-        DesiredCapabilities capabilities = new ChromeCapabilities().getCapability("testStartSel");
-        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.125:4444/wd/hub"), capabilities);
+        //DesiredCapabilities capabilities = new ChromeCapabilities().getCapability("testStartSel");
+        //WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.125:4444/wd/hub"), capabilities);
         driver.get("http://www.google.com");
         driver.getTitle();
         driver.getCurrentUrl();
